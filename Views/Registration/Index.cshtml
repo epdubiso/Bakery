@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Bakery2018.Models.Person>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+
+<p>@Html.ActionLink("Register", "Register")</p>
+
+<div class="row">
+    <table class="table">
+
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.PersonLastName)</th>
+            <th>@Html.DisplayNameFor(model => model.PersonFirstName)</th>
+            <th>@Html.DisplayNameFor(model => model.PersonEmail)</th>
+            <th>@Html.DisplayNameFor(model => model.PersonPhone)</th>
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+           <tr>
+             <th>@Html.DisplayFor(model => item.PersonLastName)</th>
+             <th>@Html.DisplayFor(model => item.PersonFirstName)</th>
+             <th>@Html.DisplayFor(model => item.PersonEmail)</th>
+             <th>@Html.DisplayFor(model => item.PersonPhone)</th>
+            </tr>
+        }
+
+
+    </table>
+</div>

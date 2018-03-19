@@ -1,0 +1,115 @@
+﻿@model Bakery2018.Models.Sale
+
+@{
+    ViewBag.Title = "Receipt";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Sale</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SaleDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaleDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee.EmployeeTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee.EmployeeTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Person.PersonLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Person.PersonLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerKey)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerKey)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SaleDetailKey)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaleDetailKey)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductKey)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductKey)
+        </dd>
+        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SaleDetailQuantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaleDetailQuantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SaleDetailDiscount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaleDetailDiscount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SaleDetailSaleTaxPercent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaleDetailSaleTaxPercent)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SaleDetailEatInTax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaleDetailEatInTax)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Product)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Product)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sales)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sales)
+        </dd>
+       
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SaleKey }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Bakery2018.Models.Sale>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New Sale", "Create")
+</p>
+<table class="table">
+    <tr>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SaleDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Employee.EmployeeTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Person.PersonLastName)
+        </th>
+
+
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        
+        <th>
+            @Html.DisplayFor(model => item.ProductName)
+        </th>
+        <th>
+            @Html.DisplayFor(model => item.ProductPrice)
+        </th>
+        <td>
+            @Html.DisplayFor(modelItem => item.SaleDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Employee.EmployeeTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Person.PersonLastName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.SaleKey }) |
+            @Html.ActionLink("Receipt", "Receipt", new { id = item.SaleKey }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.SaleKey })
+        </td>
+    </tr>
+}
+
+</table>
